@@ -17,14 +17,23 @@
 
         <div class="container">
 
+            
             <ul v-if="emails.length >= numEmail">
                 <li v-for="(email, i) in emails">
                     {{ i + 1 }} : {{ email }}
                 </li>
             </ul>
-            <button @click="getmail">Genera email</button>
-            <button @click="cancel">cancella email</button>
-            
+
+            <div class="btn">
+                <button @click="getmail">Genera email</button>
+               
+            </div>
+
+            <div class="btn2">
+                 <button @click="cancel">cancella email</button>
+            </div>
+           
+
         </div>
        
         
