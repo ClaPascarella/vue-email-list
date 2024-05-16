@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Link css -->
+    <link rel="stylesheet" href="./style.css">
      <!-- Importo Vue.js -->
      <script src="https://unpkg.com/vue@3.4.27/dist/vue.global.js"></script>
      <!-- Importo Axios -->
@@ -13,11 +15,18 @@
     
     <div id="app">
 
-        <ul v-if="emails.length >= numEmail">
-            <li v-for="(email, i) in emails">
-                {{ i + 1 }} : {{ email }}
-            </li>
-        </ul>
+        <div class="container">
+
+            <ul v-if="emails.length >= numEmail">
+                <li v-for="(email, i) in emails">
+                    {{ i + 1 }} : {{ email }}
+                </li>
+            </ul>
+            <button @click="getmail">Genera email</button>
+            <button @click="cancel">cancella email</button>
+            
+        </div>
+       
         
 
     </div>
